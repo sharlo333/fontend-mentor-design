@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --Purple-100: #dacffc;
+    --Purple-500: #744fdb;
+    
+    --Yellow-100: #f9eee1;
+    --Yellow-500: #ffcb6b;
+    
+    --White: #ffffff;
+    --Black: #121212;
+}
+body {
+    display: grid;
+    place-content: center;
+    font-family: "DM Sans", sans-serif;
+    font-size: 18px;
+    line-height: 1;
+    min-height: 100vh;
+    background-color: #ededed;
+}
+img {
+    max-width: 100%;
+    display: block;
+}
+/* clases */
+.elemnts {
+    border-radius: 8px;
+    overflow: hidden;
+}
+.xlrg-text {
+    font-size: 4rem;
+    letter-spacing: -1px;
+    font-weight: 500;
+}
+.lrg-text {
+    font-size: 3rem;
+    letter-spacing: -2px;
+    font-weight: 500;
+}
+.sm-text {
+    font-size: 18px;
+}
+/* binto grid */
+.binto-grid {
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-auto-rows: 75px;
+    gap: 1rem;
+    grid-template-areas: 
+    'box1 box2 box2 box3'
+    'box1 box2 box2 box3'
+    'box1 box2 box2 box3'
+    'box1 box2 box2 box3'
+    'box1 box5 box6 box3'
+    'box4 box5 box6 box3'
+    'box4 box5 box6 box3'
+    'box4 box7 box8 box8'
+    'box4 box7 box8 box8'
+    'box4 box7 box8 box8'
+    ;
+    margin: 1rem;
+    max-width: 1440px;
+
+}
+/* elemnts binto All*/
+/* elemnts binto one*/
+.binto-grid .elemnts:nth-child(1) {
+    grid-area: box1;
+    padding: 5rem 2rem 0 2.5rem;
+    background-color: var(--Yellow-100);
+}
+.binto-grid .elemnts:nth-child(1) img {
+    margin-top: 1rem;
+}
+/* elemnts binto tow */
+.binto-grid .elemnts:nth-child(2) {
+    grid-area: box2;
+    background-color: var(--Purple-500);
+    padding: 4rem 3rem;
+    text-align: center;
+}
+.binto-grid .elemnts:nth-child(2) .xlrg-text {
+    color: var(--White);
+}
+.binto-grid .elemnts:nth-child(2) img {
+    width: 30%;
+    margin: 20px auto 10px;
+}
+.binto-grid .elemnts:nth-child(2) .sm-text {
+    color: var(--White);
+}
+/* elemnts binto three */
+.binto-grid .elemnts:nth-child(3) {
+    grid-area: box3;
+    background-color: var(--Purple-100);
+    padding: 3rem 2rem;
+    overflow: hidden;
+}
+.binto-grid .elemnts:nth-child(3) img {
+    min-width: 140%;
+    margin: 1rem 0;
+}
+/* elemnts binto four */
+.binto-grid .elemnts:nth-child(4) {
+    grid-area: box4;
+    background-color: var(--Yellow-500);
+    padding: 2rem;
+}
+.binto-grid .elemnts:nth-child(4) img {
+    min-width: 80%;
+    margin: 2rem auto 0;
+}
+/* elemnts binto five */
+.binto-grid .elemnts:nth-child(5) {
+    grid-area: box5;
+    position: relative;
+    padding: 2rem;
+    background-color: var(--White);
+}
+.binto-grid .elemnts:nth-child(5) p {
+    margin-top: 6rem;
+}
+.binto-grid .elemnts:nth-child(5) img {
+    position: absolute;
+}
+/* elemnts binto sex */
+.binto-grid .elemnts:nth-child(6) {
+    grid-area: box6;
+    background-color: var(--Yellow-500);
+    padding: 1rem 2rem;
+}
+.binto-grid .elemnts:nth-child(6) p {
+    margin-bottom: 1rem;
+    font-size: 33px;
+    width: 140px;
+}
+.binto-grid .elemnts:nth-child(6) img {
+    margin-inline: auto;
+}
+/* elemnts binto seven */
+.binto-grid .elemnts:nth-child(7) {
+    grid-area: box7;
+    background-color: var(--White);
+    padding: 2rem;
+    display: grid;
+    gap: 1rem;
+}
+.binto-grid .elemnts:nth-child(7) img {
+    max-width: 70%;
+}
+/* elemnts binto seghit */
+.binto-grid .elemnts:last-child {
+    grid-area: box8;
+    background-color: var(--Purple-500);
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    padding: 1rem 2rem;
+    color: var(--White);
+}
+.binto-grid .elemnts:last-child img {
+    max-width: 80%;
+}
+.binto-grid .elemnts:last-child h3 {
+    font-size: 3rem;
+}
+/* media for tablet */
+@media (max-width: 1040px) {
+    .binto-grid {
+        display: grid;
+        grid-auto-columns: 1fr;
+        grid-auto-rows: inherit;
+        gap: 1rem;
+        grid-template-areas: 
+        'box1 box2 '
+        'box1 box2 '
+        'box1 box2 '
+        'box3 box4 '
+        'box3 box4 '
+        'box3 box4 '
+        'box5 box6 '
+        'box5 box6 '
+        'box7 box8 '
+        'box7 box8 '
+        ;
+        margin: 1rem;
+        max-width: 1440px;
+    
+    }
+}
+@media (max-width: 690px) {
+    .binto-grid {
+        display: grid;
+        grid-auto-columns: 1fr;
+        grid-auto-rows: inherit;
+        gap: 1rem;
+        grid-template-areas: 
+        'box1'
+        'box2'
+        'box3'
+        'box4'
+        'box5'
+        'box6'
+        'box7'
+        'box8'
+        ;
+        margin: 1rem;
+        max-width: 1440px;
+    
+    }
+}
